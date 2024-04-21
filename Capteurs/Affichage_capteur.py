@@ -67,3 +67,19 @@ for lat, lon in capteurs_rad:
 
 # Affichage de la figure
 mlab.show()
+
+# Charger l'image
+img = imageio.v2.imread('earth.jpg')
+
+# Créer une figure
+fig, ax = plt.subplots()
+
+# Afficher l'image
+ax.imshow(img, extent=[-180, 180, -90, 90])
+
+# Ajouter les positions des capteurs
+for lat, lon in capteurs:
+    ax.plot(lon, lat, 'ro')  # Utiliser une couleur rouge pour les capteurs
+
+# Afficher la figure
+plt.show()
