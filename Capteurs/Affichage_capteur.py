@@ -43,43 +43,28 @@ capteurs = [
 # Conversion des coordonnées en radians
 capteurs_rad = [(np.deg2rad(lat), np.deg2rad(lon)) for lat, lon in capteurs]
 
-# Rayon de la Terre (en mètres)
 R = 6371
-
-# Créer une sphère
 phi, theta = np.mgrid[0:np.pi:101j, 0:2*np.pi:101j]
 x = R * np.sin(phi) * np.cos(theta)
 y = R * np.sin(phi) * np.sin(theta)
 z = R * np.cos(phi)
 
-# Création de la figure 3D
-mlab.figure(size=(700, 700))
 
-# Dessiner la sphère (Terre)
+mlab.figure(size=(700, 700))
 mlab.mesh(x, y, z, color=(0, 0, 1))  # Utiliser une couleur bleue pour tous les points
 
-# Ajout des points sur le globe (capteurs)
 for lat, lon in capteurs_rad:
     x = R * np.cos(lat) * np.cos(lon)
     y = R * np.cos(lat) * np.sin(lon)
     z = R * np.sin(lat)
     mlab.points3d(x, y, z, color=(1, 0, 0), scale_factor=100)  # Utiliser une couleur rouge pour les capteurs
-
-# Affichage de la figure
+    
 mlab.show()
 
-# Charger l'image
 img = imageio.v2.imread('earth.jpg')
-
-# Créer une figure
 fig, ax = plt.subplots()
-
-# Afficher l'image
 ax.imshow(img, extent=[-180, 180, -90, 90])
-
-# Ajouter les positions des capteurs
 for lat, lon in capteurs:
     ax.plot(lon, lat, 'ro')  # Utiliser une couleur rouge pour les capteurs
 
-# Afficher la figure
 plt.show()
