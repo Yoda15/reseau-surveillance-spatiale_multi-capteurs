@@ -1,0 +1,25 @@
+
+Jour0
+2 capteur(s) nécessaire(s) : ('Sao Paulo', 'Kolkata')
+2 capteur(s) nécessaire(s) : ('Buenos Aires', 'Kolkata')
+2 capteur(s) nécessaire(s) : ('Kolkata', 'Tokyo')
+3 capteur(s) nécessaire(s) : ('Sao Paulo', 'Buenos Aires', 'Kolkata')
+3 capteur(s) nécessaire(s) : ('Sao Paulo', 'Kolkata', 'Tokyo')
+3 capteur(s) nécessaire(s) : ('Buenos Aires', 'Kolkata', 'Tokyo')
+4 capteur(s) nécessaire(s) : ('Sao Paulo', 'Buenos Aires', 'Kolkata', 'Tokyo')
+Jour1
+2 capteur(s) nécessaire(s) : ('Sao Paulo', 'Kolkata')
+2 capteur(s) nécessaire(s) : ('Buenos Aires', 'Kolkata')
+2 capteur(s) nécessaire(s) : ('Kolkata', 'Tokyo')
+3 capteur(s) nécessaire(s) : ('Sao Paulo', 'Buenos Aires', 'Kolkata')
+3 capteur(s) nécessaire(s) : ('Sao Paulo', 'Kolkata', 'Tokyo')
+3 capteur(s) nécessaire(s) : ('Buenos Aires', 'Kolkata', 'Tokyo')
+4 capteur(s) nécessaire(s) : ('Sao Paulo', 'Buenos Aires', 'Kolkata', 'Tokyo')
+Jour2
+2 capteur(s) nécessaire(s) : ('Sao Paulo', 'Kolkata')
+2 capteur(s) nécessaire(s) : ('Buenos Aires', 'Kolkata')
+2 capteur(s) nécessaire(s) : ('Kolkata', 'Tokyo')
+3 capteur(s) nécessaire(s) : ('Sao Paulo', 'Buenos Aires', 'Kolkata')
+3 capteur(s) nécessaire(s) : ('Sao Paulo', 'Kolkata', 'Tokyo')
+3 capteur(s) nécessaire(s) : ('Buenos Aires', 'Kolkata', 'Tokyo')
+4 capteur(s) nécessaire(s) : ('Sao Paulo', 'Buenos Aires', 'Kolkata', 'Tokyo')
