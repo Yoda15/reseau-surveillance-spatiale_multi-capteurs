@@ -59,10 +59,13 @@ def cartesian_to_keplerian(cartesian_orbits):
     keplerian_orbits = []
     for cartesian_orbit, a, e, i, position in cartesian_orbits:
         # Créer la KeplerianOrbit
-        keplerian_orbit = KeplerianPropagator(KeplerianOrbit(
+        kp = KeplerianOrbit(
             CartesianOrbit(cartesian_orbit)
-        ))
-        keplerian_orbits.append([keplerian_orbit,a,e,i])
+        )
+        keplerian_orbit = KeplerianPropagator(
+            kp
+        )
+        keplerian_orbits.append([keplerian_orbit,kp.getA(),kp.getE(),kp.getI()])
     return keplerian_orbits
 
 #Ouverture de l'Excel
@@ -83,7 +86,7 @@ i_imported = [float(ephemeris_databrute.cell_value(row, 6)) for row in range(1,e
 # Récupérer les valeurs calculées
 a_calculated = [float(a) for orbit, a, e, i in keplerian_orbits]
 e_calculated = [float(e) for orbit, a, e, i in keplerian_orbits]
-i_calculated = [float(i) for orbit, a, e, i in keplerian_orbits]
+i_calculated = [float(math.degrees(i)) for orbit, a, e, i in keplerian_orbits]
 
 
 fig, axs = plt.subplots(3)
